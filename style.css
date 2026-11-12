@@ -51,7 +51,3 @@ h1{font-size:clamp(60px,9vw,120px)}
 .boot.stage-zoom .camera{transform:translateX(125%) scale(9);opacity:0;transition:transform 1.55s ease-in,opacity 1.3s}
 @media(max-width:600px){.camera{transform:translateX(-55%) scale(3.7)}.scene{width:96vw;height:64vw}.boot.stage-pan .camera{transform:translateX(0) scale(1)}.boot.stage-push .camera{transform:translateX(10%) scale(1.35)}.boot.stage-zoom .camera{transform:translateX(125%) scale(9)}.cinematic-instruction{bottom:15%}#caption{bottom:17%}}
 @media(prefers-reduced-motion:reduce){.boot{display:none!important}*{animation:none!important;transition:none!important}}
-
-/* Mission 005A: subtle camera yaw toward tower; existing monitor pan unchanged */
-.boot.stage-tower:not(.stage-pan) .camera{transform:perspective(1100px) translateX(-54%) scale(3.15) rotateY(-7deg)}
-@media(max-width:600px){.boot.stage-tower:not(.stage-pan) .camera{transform:perspective(900px) translateX(-55%) scale(3.7) rotateY(-5deg)}}
