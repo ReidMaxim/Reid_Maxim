@@ -9,48 +9,11 @@ html,body{max-width:100%;overflow-x:clip}
 h1{font-size:clamp(60px,9vw,120px)}
 @media(max-width:800px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:520px){h1{font-size:clamp(56px,15vw,75px)}.status pre{font-size:clamp(10px,3.1vw,15px)}}
-.boot{position:fixed;inset:0;z-index:50;background:radial-gradient(ellipse at center,#223d28,#060b08 72%);overflow:hidden;isolation:isolate;transition:opacity .7s,visibility .7s}
-.boot.done{opacity:0;visibility:hidden;pointer-events:none}
-#skip{position:absolute;z-index:20;top:20px;right:20px;border:1px solid var(--green);background:#071309dd;color:var(--green);padding:12px;font:11px 'IBM Plex Mono'}
-.cinematic{position:absolute;inset:0;z-index:5;pointer-events:none;transition:opacity 1s}
-.cinematic-glow{position:absolute;inset:0;background:radial-gradient(circle,#315b3766,transparent 70%)}
-.cinematic-prop{position:absolute;left:50%;top:50%;width:85vmin;height:85vmin;transform:translate(-50%,-50%) rotate(-8deg);filter:drop-shadow(16px 25px 18px #000b);transition:transform 2.1s cubic-bezier(.3,0,.2,1),opacity .7s}
-.hero-floppy{position:absolute;inset:0;background:linear-gradient(130deg,#485548,#101b13 32%,#263228 75%,#0b120e);border:clamp(8px,1.5vmin,15px) solid #516353;border-radius:5%;box-shadow:inset 0 0 0 5px #101a12,inset 0 -20px 35px #0008;overflow:hidden}
-.hero-floppy:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 5px,#ffffff09 6px)}
-.hero-metal{position:absolute;top:-2%;left:26%;width:48%;height:34%;background:linear-gradient(90deg,#819587,#e3e9e1 40%,#8ca195 75%,#687e70);border:4px solid #64786b;border-radius:0 0 8px 8px}
-.hero-metal-hole{position:absolute;left:34%;top:10%;width:32%;height:76%;background:#0c170f;border-radius:4px}
-.hero-round{position:absolute;left:40%;top:42%;width:20%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d4e1d7 0 28%,#627969 30% 43%,#d0dcd2 45%)}
-.hero-sticker{position:absolute;bottom:7%;left:9%;right:9%;height:29%;border:2px solid #719078;background:linear-gradient(#1a3020,#0a170d);display:flex;flex-direction:column;justify-content:center;gap:6%;padding:4% 5%;font-family:'IBM Plex Mono';color:#baffc8}
-.hero-sticker span{font-size:clamp(15px,4.5vmin,43px);font-weight:700;letter-spacing:-.06em}
-.hero-sticker small{font-size:clamp(7px,1.7vmin,16px)}.hero-sticker b{font-size:clamp(8px,2vmin,18px)}
-.hero-notch{position:absolute;right:0;bottom:0;width:12%;height:12%;border:4px solid #506653;background:#07100a}
-.cinematic-instruction{position:absolute;bottom:7%;left:50%;transform:translateX(-50%);font:clamp(10px,1.5vw,14px) 'IBM Plex Mono';white-space:nowrap;color:var(--green);transition:opacity .5s}
-.camera{position:absolute;inset:0;z-index:2;display:grid;place-items:center;transform:translateX(-54%) scale(3.15);transition:transform 2.8s cubic-bezier(.42,0,.2,1)}
-.scene{position:relative;width:min(88vw,690px);height:min(55vw,400px);opacity:0;transition:opacity .8s}
-.monitor{position:absolute;left:5%;top:9%;width:55%;height:72%;border:12px solid #c5c7b4;border-bottom-width:27px;background:#4b594b;border-radius:18px;box-shadow:12px 13px #050b07}
-.screen{position:relative;margin:10px;height:85%;background:radial-gradient(circle,#123e1d,#06150b);border-radius:12px;box-shadow:inset 0 0 25px #000;overflow:hidden}
-.screen:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,#0004 4px);pointer-events:none}
-#terminal{padding:15px;color:var(--green);font:clamp(8px,1.5vw,15px)/1.65 'IBM Plex Mono';text-shadow:0 0 10px #69ff87;white-space:nowrap}
-.stand{position:absolute;top:100%;left:30%;width:40%;height:23%;background:linear-gradient(#a6ae9c 0 50%,#c6c9b6 50%);clip-path:polygon(30% 0,70% 0,70% 65%,100% 100%,0 100%,30% 65%)}
-.tower{position:absolute;right:8%;top:14%;width:26%;height:73%;background:#bfc2ae;border:9px solid #d4d4c0;border-radius:7px;box-shadow:inset -12px 0 #90988b,12px 14px #050a07}
-.tower span{display:block;margin:12px;color:#435747;font:12px 'IBM Plex Mono'}
-.slot{position:absolute;left:15%;top:35%;width:70%;height:8px;background:#0c180e;border:2px solid #778678}
-.light{position:absolute;right:18%;bottom:10%;width:9px;height:9px;background:var(--green);border-radius:50%;box-shadow:0 0 15px var(--green)}
-.disk{position:absolute;right:8%;top:-37%;width:26%;aspect-ratio:1;background:linear-gradient(120deg,#303c32,#0a140d);border:5px solid #516354;border-radius:6px;z-index:3;transform:rotate(-12deg);opacity:0;transition:top 2.2s cubic-bezier(.35,0,.2,1),right 2.2s cubic-bezier(.35,0,.2,1),transform 2.2s cubic-bezier(.35,0,.2,1),opacity .5s}
-.disk .shutter{position:absolute;left:27%;top:0;width:46%;height:30%;background:#a8b8aa}
-.disk .label{position:absolute;left:9%;right:9%;bottom:8%;padding:5%;background:#a4dfb2;color:#122318;font:clamp(5px,.8vw,9px) monospace}
-#caption{position:absolute;z-index:10;left:50%;bottom:6%;transform:translateX(-50%);color:var(--green);font:clamp(10px,1.4vw,14px) 'IBM Plex Mono';white-space:nowrap;opacity:0;transition:opacity .5s}
-.boot.stage-pivot .cinematic-prop{transform:translate(-50%,-50%) rotate(12deg) scale(.88)}
-.boot.stage-tower .cinematic{opacity:0}
-.boot.stage-tower .scene{opacity:1}
-.boot.stage-tower .disk{opacity:1}
-.boot.stage-insert .disk{right:8%;top:36%;transform:rotate(0) scale(.45);opacity:0}
-.boot.stage-pan .camera{transform:translateX(0) scale(1)}
-.boot.stage-pan #caption{opacity:1}
-.boot.stage-push .camera{transform:translateX(11%) scale(1.32)}
-.boot.stage-zoom .camera{transform:translateX(125%) scale(9);opacity:0;transition:transform 1.55s ease-in,opacity 1.3s}
-@media(max-width:600px){.camera{transform:translateX(-55%) scale(3.7)}.scene{width:96vw;height:64vw}.boot.stage-pan .camera{transform:translateX(0) scale(1)}.boot.stage-push .camera{transform:translateX(10%) scale(1.35)}.boot.stage-zoom .camera{transform:translateX(125%) scale(9)}.cinematic-instruction{bottom:15%}#caption{bottom:17%}}
-@media(prefers-reduced-motion:reduce){.boot{display:none!important}*{animation:none!important;transition:none!important}}
+#boot{position:fixed;inset:0;z-index:50;overflow:hidden}
+#boot-art{display:block;border:0;width:100%;height:100%;pointer-events:none}
+#skip{position:absolute;right:max(16px,env(safe-area-inset-right));top:max(16px,env(safe-area-inset-top));border:1px solid #597362;border-radius:3px;background:#101b16;color:#c5e6c9;padding:12px 15px;font:11px monospace;letter-spacing:.07em}
+.boot-page{transform-origin:0 0;pointer-events:none}
+@media(prefers-reduced-motion:reduce){#boot,#replay{display:none}}
 
 /* Mission 006A: academic archive only — no animation modifications */
 .archive-intro{max-width:780px;color:var(--muted);line-height:1.75}
