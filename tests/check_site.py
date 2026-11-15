@@ -29,7 +29,7 @@ for name,page in pages.items():
 index=pages['index.html'];s=(root/'index.html').read_text(encoding='utf-8')
 assert len(re.findall('class="project-visual"',s))==6
 assert len(re.findall('class="writing-entry"',s))==4
-assert 'href="https://reidmaxim.github.io/creaturecreator/' not in s
+assert 'href="https://reidmaxim.github.io/creaturecreator/' in s
 protected=json.loads((root/'tests/protected-baseline.json').read_text())
 for path,digest in protected.items():assert hashlib.sha256((root/path).read_bytes().replace(b"\r\n",b"\n")).hexdigest()==digest,f'Protected intro changed: {path}'
 print(f'PASS: {len(pages)} pages, {checks} local references, six projects, four writings, safe external links, protected intro hashes.')
